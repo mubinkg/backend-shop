@@ -21,8 +21,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/5.0.6/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'sc%oco$+(3$z$at=z4j)#l-+ym)+_b11389mdt2^12m$bf63%@'
-
+SECRET_KEY = 'm1yy((-@9&u@f-y2rf88e5dchu)+knfvl*9le1=hmbg*e28451'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
@@ -129,16 +128,16 @@ DATABASES = {
 
 # Database
 # https://docs.djangoproject.com/en/5.0.6/ref/settings/#databases
-# DATABASES = {
-#    'default': {
-#        'ENGINE': 'django.db.backends.postgresql',
-#        'NAME': 'proshop',
-#        'USER': 'dennisivy',
-#        'PASSWORD': os.environ.get('DB_PASS'),
-#        'HOST': os.environ.get('HOST'),
-#        'PORT': '5432'
-#    }
-# }
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'HouseSteel',
+        'USER': 'postgres',
+        'PASSWORD': 'Diego2robert@',
+        'HOST': 'localhost',
+        'PORT': '5432',
+    }
+}
 
 
 # Password validation

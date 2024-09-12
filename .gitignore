@@ -1,1 +1,42 @@
+# Entorno virtual
 myenv/
+
+# Archivos compilados de Python
+*.pyc
+__pycache__/
+*.pyo
+*.pyd
+
+# Archivos de caché de Python
+.pytest_cache/
+.mypy_cache/
+
+# Archivos de ambiente
+.env
+.venv
+env/
+venv/
+
+# Archivos de configuración del IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Archivos de logs
+*.log
+
+# Archivos de base de datos
+*.sqlite3
+
+# Archivos de distribución
+dist/
+build/
+*.egg-info/
+
+# Otros archivos y directorios comunes
+.DS_Store
+node_modules/
+
+# Frontend specific
+frontend/.eslintcache
