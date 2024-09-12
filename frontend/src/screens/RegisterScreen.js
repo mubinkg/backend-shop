@@ -32,7 +32,7 @@ function RegisterScreen({ location, history }) {
         e.preventDefault()
 
         if (password != confirmPassword) {
-            setMessage('Passwords do not match')
+            setMessage('Las contraseñas no coinciden')
         } else {
             dispatch(register(name, email, password))
         }
@@ -41,18 +41,18 @@ function RegisterScreen({ location, history }) {
 
     return (
         <FormContainer>
-            <h1>Sign In</h1>
+            <h1>Registrarse</h1>
             {message && <Message variant='danger'>{message}</Message>}
             {error && <Message variant='danger'>{error}</Message>}
             {loading && <Loader />}
             <Form onSubmit={submitHandler}>
 
                 <Form.Group controlId='name'>
-                    <Form.Label>Name</Form.Label>
+                    <Form.Label>Nombre</Form.Label>
                     <Form.Control
                         required
                         type='name'
-                        placeholder='Enter name'
+                        placeholder='Ingrese su nombre'
                         value={name}
                         onChange={(e) => setName(e.target.value)}
                     >
@@ -60,11 +60,11 @@ function RegisterScreen({ location, history }) {
                 </Form.Group>
 
                 <Form.Group controlId='email'>
-                    <Form.Label>Email Address</Form.Label>
+                    <Form.Label>Correo Electrónico</Form.Label>
                     <Form.Control
                         required
                         type='email'
-                        placeholder='Enter Email'
+                        placeholder='Ingrese su correo electrónico'
                         value={email}
                         onChange={(e) => setEmail(e.target.value)}
                     >
@@ -72,11 +72,11 @@ function RegisterScreen({ location, history }) {
                 </Form.Group>
 
                 <Form.Group controlId='password'>
-                    <Form.Label>Password</Form.Label>
+                    <Form.Label>Contraseña</Form.Label>
                     <Form.Control
                         required
                         type='password'
-                        placeholder='Enter Password'
+                        placeholder='Ingrese su contraseña'
                         value={password}
                         onChange={(e) => setPassword(e.target.value)}
                     >
@@ -84,11 +84,11 @@ function RegisterScreen({ location, history }) {
                 </Form.Group>
 
                 <Form.Group controlId='passwordConfirm'>
-                    <Form.Label>Confirm Password</Form.Label>
+                    <Form.Label>Confirmar Contraseña</Form.Label>
                     <Form.Control
                         required
                         type='password'
-                        placeholder='Confirm Password'
+                        placeholder='Confirme su contraseña'
                         value={confirmPassword}
                         onChange={(e) => setConfirmPassword(e.target.value)}
                     >
@@ -96,16 +96,16 @@ function RegisterScreen({ location, history }) {
                 </Form.Group>
 
                 <Button type='submit' variant='primary'>
-                    Register
+                    Registrarse
                 </Button>
 
             </Form>
 
             <Row className='py-3'>
                 <Col>
-                    Have an Account? <Link
+                    ¿Ya tiene una cuenta? <Link
                         to={redirect ? `/login?redirect=${redirect}` : '/login'}>
-                        Sign In
+                        Iniciar Sesión
                         </Link>
                 </Col>
             </Row>

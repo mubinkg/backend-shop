@@ -1,37 +1,33 @@
-# PropShop Ecommerce Website With Django + React
+Este proyecto es una plataforma de ecommerce desarrollada con un frontend en React, JavaScript, y Bootstrap, y un backend en Django con Python, utilizando PostgreSQL como base de datos. La aplicación permite a los usuarios navegar, comprar productos y gestionar sus cuentas. Incluye todas las funcionalidades de un sistema completo de CRUD (Crear, Leer, Actualizar y Eliminar) para la gestión de productos, usuarios y pedidos.
 
-Live Demo can be viewed at https://www.buildproshop.com/
-
-This project is from my Django + React collaboration wih Brad Traversy. Full Course: https://www.udemy.com/course/django-with-react-an-ecommerce-website/?couponCode=387F19CD4087385E87C1
+El sistema también incluye un panel de administración donde los administradores pueden gestionar de manera eficiente el inventario de productos, los usuarios registrados, y los pedidos realizados, asegurando una experiencia fluida tanto para los administradores como para los clientes.
 
 
-![DEMO](../master/static/images/proshop_django_demo.png)
+
+Funcionalidades
+Carrito de compras completamente funcional
+Reseñas y calificaciones de productos
+Carrusel de productos destacados
+Paginación de productos
+Funcionalidad de búsqueda de productos
+Perfil de usuario con historial de pedidos
+Gestión de productos para administradores
+Gestión de usuarios para administradores
+Página de detalles del pedido para administradores
+Opción para marcar pedidos como entregados
+Proceso de pago (envío, método de pago, etc.)
+Integración con PayPal / tarjeta de crédito
 
 
-# Features
-* Full featured shopping cart
-* Product reviews and ratings
-* Top products carousel
-* Product pagination
-* Product search feature
-* User profile with orders
-* Admin product management
-* Admin user management
-* Admin Order details page
-* Mark orders as delivered option
-* Checkout process (shipping, payment method, etc)
-* PayPal / credit card integration
+Instrucciones de descarga y lanzamiento
 
-
-# Download & Setup Instructions
-
-* 1 - Clone project: git clone https://github.com/divanov11/proshop_django/
+* 1 - Clonar el projecto de https://github.com/Roobert23/Roobert23.git
 * 2 - cd proshop_django
-* 3 - Create virtual environment: virtualenv myenv
+* 3 - Crear virtual environment: virtualenv myenv
 * 4 - myenv\scripts\activate
 * 5 - pip install -r requirements.txt
 * 6 - python manage.py runserver
 
-# Install react modules
+Instalar modulos de react
 * 1 - cd frontend
 * 2 - npm install

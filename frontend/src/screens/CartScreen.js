@@ -28,13 +28,17 @@ function CartScreen({ match, location, history }) {
         history.push('/login?redirect=shipping')
     }
 
+    const subtotal = cartItems.reduce((acc, item) => acc + item.qty * item.price, 0)
+    const iva = subtotal * 0.21
+    const total = subtotal + iva
+
     return (
         <Row>
             <Col md={8}>
-                <h1>Shopping Cart</h1>
+                <h1>Carrito de Compras</h1>
                 {cartItems.length === 0 ? (
                     <Message variant='info'>
-                        Your cart is empty <Link to='/'>Go Back</Link>
+                        Tu carrito está vacío <Link to='/'>Volver</Link>
                     </Message>
                 ) : (
                         <ListGroup variant='flush'>
@@ -49,7 +53,7 @@ function CartScreen({ match, location, history }) {
                                         </Col>
 
                                         <Col md={2}>
-                                            ${item.price}
+                                            €{item.price}
                                         </Col>
 
                                         <Col md={3}>
@@ -90,8 +94,19 @@ function CartScreen({ match, location, history }) {
                 <Card>
                     <ListGroup variant='flush'>
                         <ListGroup.Item>
-                            <h2>Subtotal ({cartItems.reduce((acc, item) => acc + item.qty, 0)}) items</h2>
-                            ${cartItems.reduce((acc, item) => acc + item.qty * item.price, 0).toFixed(2)}
+                            <h2>Resumen ({cartItems.reduce((acc, item) => acc + item.qty, 0)}) artículos</h2>
+                            <Row>
+                                <Col>Subtotal:</Col>
+                                <Col>€{subtotal.toFixed(2)}</Col>
+                            </Row>
+                            <Row>
+                                <Col>IVA (21%):</Col>
+                                <Col>€{iva.toFixed(2)}</Col>
+                            </Row>
+                            <Row>
+                                <Col>Total:</Col>
+                                <Col>€{total.toFixed(2)}</Col>
+                            </Row>
                         </ListGroup.Item>
                     </ListGroup>
 
@@ -102,7 +117,7 @@ function CartScreen({ match, location, history }) {
                             disabled={cartItems.length === 0}
                             onClick={checkoutHandler}
                         >
-                            Proceed To Checkout
+                            Proceder al Pago
                         </Button>
                     </ListGroup.Item>
 
