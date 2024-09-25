@@ -25,7 +25,7 @@ SECRET_KEY = 'm1yy((-@9&u@f-y2rf88e5dchu)+knfvl*9le1=hmbg*e28451'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['127.0.0.1', 'localhost', 'proshop-demo.herokuapp.com']
+ALLOWED_HOSTS = ['127.0.0.1', 'localhost', 'proshop-demo.herokuapp.com', '82.102.5.58']
 
 
 # Application definition
